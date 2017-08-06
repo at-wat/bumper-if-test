@@ -42,13 +42,13 @@ do
 
   echo "\$SSN\"$prefix$padding$num\"" > $dev
   sleep 0.1
-  echo "\$STH010" > $dev
-  sleep 0.1
-  echo "\$SRE-01" > $dev
-  sleep 0.1
-  echo "\$SDI0010" > $dev
-  sleep 0.1
-  echo "\$SFR-01" > $dev
+# echo "\$STH010" > $dev
+# sleep 0.1
+# echo "\$SRE-01" > $dev
+# sleep 0.1
+# echo "\$SDI0010" > $dev
+# sleep 0.1
+# echo "\$SFR-01" > $dev
 
   echo '- Resetting'
   echo 'RB' > $dev
@@ -73,7 +73,7 @@ do
   cat /tmp/firm.txt
 
   version=`grep /tmp/firm.txt -e '^FIRM:'`
-  if grep /tmp/firm.txt -e '^FIRM:9e731b9;g$' > /dev/null 2> /dev/null;
+  if grep /tmp/firm.txt -e '^FIRM:9cd62d4;S$' > /dev/null 2> /dev/null;
   then
     echo "Firmware version check: passed ($version)"
   else
